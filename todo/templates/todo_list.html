@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List of items</title>
+</head>
+<body>
+<h1>To-Do List items</h1>
+<ul>
+    {% for items in todoitems %}
+    <li>{{items.title}}</li>
+    {% empty %}
+    <li>No items in the list</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'add_todo_items' %}">Add Items in the List</a>
+</body>
+</html>
